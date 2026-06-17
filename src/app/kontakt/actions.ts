@@ -62,10 +62,16 @@ export async function sendContactEmail(values: ContactValues): Promise<Result> {
       subject: `Ny henvendelse: ${values.projectType} – ${values.name}`,
       html,
     });
-    // MIDLERTIDIG: vis ekte feil for feilsøking. Endres tilbake til generisk melding etterpå.
-    if (error) return { ok: false, error: `Resend: ${error.name ?? ""} ${error.message ?? JSON.stringify(error)}` };
+    if (error)
+      return {
+        ok: false,
+        error: "Kunne ikke sende meldingen akkurat nå. Prøv igjen, eller ring oss.",
+      };
     return { ok: true };
-  } catch (e) {
-    return { ok: false, error: `Feil: ${e instanceof Error ? e.message : String(e)}` };
+  } catch {
+    return {
+      ok: false,
+      error: "Kunne ikke sende meldingen akkurat nå. Prøv igjen, eller ring oss.",
+    };
   }
 }
