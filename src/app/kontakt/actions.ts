@@ -28,10 +28,10 @@ export async function sendContactEmail(values: ContactValues): Promise<Result> {
     };
   }
 
-  // Bruker post@byggsolberg.no som standard (domenet er verifisert i Resend).
-  // `||` fanger også tom streng, ikke bare manglende variabel.
-  const to = process.env.CONTACT_TO || site.email;
-  const from = process.env.CONTACT_FROM || `${site.shortName} <${site.email}>`;
+  // Sender alltid fra/til det verifiserte domenet (post@byggsolberg.no),
+  // uavhengig av miljøvariabler – unngår gammel test-avsender som henger igjen.
+  const to = site.email;
+  const from = `${site.shortName} <${site.email}>`;
 
   const rows: [string, string][] = [
     ["Navn", values.name],
