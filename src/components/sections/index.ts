@@ -1,0 +1,11 @@
+export { Hero } from "./Hero";
+export { HeroLite } from "./HeroLite";
+export { TrustBar } from "./TrustBar";
+export { IntroStatement } from "./IntroStatement";
+export { ProcessSteps } from "./ProcessSteps";
+export { AboutPreview } from "./AboutPreview";
+export { CTASection } from "./CTASection";
+export { ContactForm } from "./ContactForm";
+export { FeaturedProjects } from "./FeaturedProjects";
+export { Testimonials } from "./Testimonials";
+export { SmallJobs } from "./SmallJobs";

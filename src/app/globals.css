@@ -1,26 +1,111 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ───────────────────────────────────────────────────────────
+   Designsystem – Solberg Byggservice AS
+   "Det stille håndverket": lyst, rolig, premium.
+   Sannhetskilde for design-tokens. Speiles i src/design-system/.
+   ─────────────────────────────────────────────────────────── */
+
+@theme {
+  /* Farger – nøytraler (base) */
+  --color-canvas: #faf9f6;
+  --color-white: #ffffff;
+  --color-sand: #f2efe9;
+  --color-line: #e7e2d8;
+
+  /* Farger – tekst */
+  --color-charcoal: #1c1b19;
+  --color-warm-grey: #6b6760;
+  --color-muted: #9a958c;
+
+  /* Farger – signatur (leire) */
+  --color-clay: #9c6b4a;
+  --color-clay-dark: #7e5538;
+  --color-clay-tint: #f0e7df;
+
+  /* Farger – funksjonelt */
+  --color-success: #4a6b4a;
+  --color-error: #a6473c;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* Skygger – svært subtile (premium = nesten ingen skygge) */
+  --shadow-sm: 0 1px 2px rgba(28, 27, 25, 0.04);
+  --shadow-md: 0 4px 16px rgba(28, 27, 25, 0.06);
+  --shadow-lg: 0 12px 40px rgba(28, 27, 25, 0.08);
+
+  /* Type-skala (clamp: mobil → desktop) */
+  --text-display: clamp(2.75rem, 1.9rem + 3.8vw, 4.5rem);
+  --text-display--line-height: 1.05;
+  --text-display--letter-spacing: -0.02em;
+  --text-display--font-weight: 400;
+
+  --text-h1: clamp(2.25rem, 1.7rem + 2.4vw, 3.5rem);
+  --text-h1--line-height: 1.1;
+  --text-h1--letter-spacing: -0.02em;
+  --text-h1--font-weight: 400;
+
+  --text-h2: clamp(1.75rem, 1.4rem + 1.55vw, 2.5rem);
+  --text-h2--line-height: 1.15;
+  --text-h2--letter-spacing: -0.01em;
+  --text-h2--font-weight: 400;
+
+  --text-h3: clamp(1.375rem, 1.24rem + 0.6vw, 1.625rem);
+  --text-h3--line-height: 1.2;
+  --text-h3--letter-spacing: -0.01em;
+  --text-h3--font-weight: 500;
+
+  --text-lead: clamp(1.125rem, 1.06rem + 0.3vw, 1.3125rem);
+  --text-lead--line-height: 1.55;
+
+  --text-body: clamp(1.0625rem, 1.04rem + 0.1vw, 1.125rem);
+  --text-body--line-height: 1.6;
+
+  --text-body-sm: 0.9375rem;
+  --text-body-sm--line-height: 1.55;
+
+  --text-label: 0.8125rem;
+  --text-label--line-height: 1.2;
+  --text-label--letter-spacing: 0.12em;
+  --text-label--font-weight: 600;
+
+  --text-caption: 0.8125rem;
+  --text-caption--line-height: 1.4;
 }
 
+/* Fonter settes som CSS-variabler av next/font i layout.tsx.
+   @theme inline lar Tailwind-tokens referere disse runtime-variablene. */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-hanken), ui-sans-serif, system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-charcoal);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--color-clay-tint);
+    color: var(--color-charcoal);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-clay);
+    outline-offset: 2px;
+  }
 }
