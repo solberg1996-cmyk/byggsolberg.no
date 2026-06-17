@@ -28,10 +28,10 @@ export async function sendContactEmail(values: ContactValues): Promise<Result> {
     };
   }
 
-  const to = process.env.CONTACT_TO ?? site.email;
-  // CONTACT_FROM må være en avsender på et verifisert domene i Resend.
-  // Til testing kan onboarding@resend.dev brukes.
-  const from = process.env.CONTACT_FROM ?? "Solberg Byggservice <onboarding@resend.dev>";
+  // Bruker post@byggsolberg.no som standard (domenet er verifisert i Resend).
+  // `||` fanger også tom streng, ikke bare manglende variabel.
+  const to = process.env.CONTACT_TO || site.email;
+  const from = process.env.CONTACT_FROM || `${site.shortName} <${site.email}>`;
 
   const rows: [string, string][] = [
     ["Navn", values.name],
