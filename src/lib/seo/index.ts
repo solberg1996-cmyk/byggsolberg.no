@@ -3,7 +3,7 @@ import { site } from "@/content/site";
 import { testimonials } from "@/content/testimonials";
 
 // TODO: bytt til faktisk produksjonsdomene før lansering hvis det avviker.
-export const siteUrl = "https://www.byggsolberg.no";
+export const siteUrl = "https://byggsolberg.no";
 
 type BuildMetadataArgs = {
   /** Sidespesifikk tittel (uten firmanavn – root-template legger det til). */
