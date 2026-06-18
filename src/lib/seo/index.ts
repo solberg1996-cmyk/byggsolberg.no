@@ -46,6 +46,9 @@ export const rootMetadata: Metadata = {
     template: `%s · ${site.name}`,
   },
   description: site.tagline,
+  verification: {
+    google: "Wb5mxtDlK8A6cLbvozTY3H7eG8_36Fd4uu28A88Bs74",
+  },
   openGraph: {
     siteName: site.name,
     locale: "nb_NO",
