@@ -10,8 +10,8 @@ import type { Project } from "@/types";
 // Hvilke prosjekter som vises på forsiden, i denne rekkefølgen.
 const featuredSlugs = [
   "utetrapp-sittebenk-tolvsrod",
-  "ny-terrasse-og-utetrapp",
   "oppgradert-veranda-barkaker",
+  "etterisolering-kledning-tolvsrod",
 ];
 
 /** Utvalgte prosjekter på forsiden – sidens viktigste tillitsdriver. */

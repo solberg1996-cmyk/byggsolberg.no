@@ -136,15 +136,8 @@ export const projects: Project[] = [
     location: "Melsomvik",
     excerpt:
       "Råteskadet terrasse revet og bygget opp på nytt, med ny utetrapp og nytt rekkverk rundt kjellernedgangen.",
-    coverImage: "/images/projects/ny-terrasse-utetrapp-etter2.jpg",
-    images: [
-      "/images/projects/ny-terrasse-utetrapp-for1.jpg",
-      "/images/projects/ny-terrasse-utetrapp-for2.jpg",
-      "/images/projects/ny-terrasse-utetrapp-for3.jpg",
-      "/images/projects/ny-terrasse-utetrapp-hoved.jpg",
-      "/images/projects/ny-terrasse-utetrapp-etter1.jpg",
-      "/images/projects/ny-terrasse-utetrapp-etter3.jpg",
-    ],
+    coverImage: "",
+    images: [],
     year: 2026,
     challenge:
       "Både terrassen og rekkverket var råteskadet og måtte byttes. Samtidig trengte kjellernedgangen et nytt, trygt rekkverk.",
