@@ -37,6 +37,7 @@ export async function sendContactEmail(values: ContactValues): Promise<Result> {
     ["Navn", values.name],
     ["Telefon", values.phone],
     ["E-post", values.email],
+    ["Adresse", values.address],
     ["Gjelder", values.projectType],
     ["Ønsket oppstart", values.startTime || "—"],
   ];

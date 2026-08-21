@@ -27,6 +27,7 @@ const initial: ContactValues = {
   name: "",
   phone: "",
   email: "",
+  address: "",
   projectType: "",
   startTime: "",
   message: "",
@@ -132,6 +133,18 @@ export function ContactForm() {
           />
         </FormField>
       </div>
+
+      <FormField label="Adresse" htmlFor="address" required error={errors.address}>
+        <Input
+          id="address"
+          name="address"
+          autoComplete="street-address"
+          placeholder="Gateadresse, postnummer og sted"
+          value={values.address}
+          invalid={!!errors.address}
+          onChange={(e) => update("address", e.target.value)}
+        />
+      </FormField>
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         <FormField
