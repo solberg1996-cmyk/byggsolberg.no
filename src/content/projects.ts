@@ -130,6 +130,24 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "badstue-sporty-gressbanen",
+    title: "Oppussing av badstue",
+    category: "oppussing",
+    location: "Sporty Gressbanen",
+    excerpt:
+      "Badstuen på Sporty Gressbanen fikk nytt panel på veggene og nye benker i osp.",
+    coverImage: "/images/projects/badstue-gressbanen-hoved.jpg",
+    images: [
+      "/images/projects/badstue-gressbanen-1.jpg",
+      "/images/projects/badstue-gressbanen-2.jpg",
+    ],
+    year: 2026,
+    challenge:
+      "Badstuen hadde slitt panel og benker som trengte fornyelse. Sporty ønsket en badstue som igjen ser innbydende ut og tåler daglig bruk av mange medlemmer.",
+    solution:
+      "Vi kledde veggene med nytt panel og bygde nye badstuebenker i osp — et lyst treslag som holder seg behagelig å sitte på i varmen. Resultatet er en frisk og trivelig badstue.",
+  },
+  {
     slug: "ny-terrasse-og-utetrapp",
     title: "Ny terrasse og utetrapp",
     category: "terrasse",

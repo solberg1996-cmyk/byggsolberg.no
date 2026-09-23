@@ -9,8 +9,8 @@ import type { Project } from "@/types";
 
 // Hvilke prosjekter som vises på forsiden, i denne rekkefølgen.
 const featuredSlugs = [
+  "badstue-sporty-gressbanen",
   "utetrapp-sittebenk-tolvsrod",
-  "oppgradert-veranda-barkaker",
   "etterisolering-kledning-tolvsrod",
 ];
 
